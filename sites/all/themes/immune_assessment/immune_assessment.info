@@ -1,5 +1,5 @@
-name = Immune Assessment Lab theme
-description = A Subtheme of the Bootstrap framework
+name = Immune Assessment theme
+description = A Theme for the Immune Assessment Lab
 core = 7.x
 base theme = bootstrap
 
@@ -13,8 +13,11 @@ regions[header]         = 'Top Bar'
 regions[highlighted]    = 'Highlighted'
 regions[help]           = 'Help'
 regions[content]        = 'Content'
+regions[news]        	= 'Homepage news'
 regions[sidebar_first]  = 'Primary'
 regions[sidebar_second] = 'Secondary'
+regions[footer_legal]   = 'Footer menu and legal content'
+regions[footer_logos]   = 'Footer logos'
 regions[footer]         = 'Footer'
 regions[page_top]       = 'Page top'
 regions[page_bottom]    = 'Page bottom'
@@ -24,7 +27,7 @@ regions[page_bottom]    = 'Page bottom'
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 
-stylesheets[all][] = css/styles.css
+stylesheets[all][] = css/style.css
 
 
 ; For information on choosing the desired method, please read the Drupal

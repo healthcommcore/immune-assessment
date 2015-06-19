@@ -1,0 +1,144 @@
+/* Styles */
+@import 'fonts.scss';
+
+/* Variables */
+$dkblue: #0C3965;
+$ltblue: #005da8;
+$green: #87A52E;
+$alegreya-lt: 'alegreya_sanslight';
+$alegreya-med: 'alegreya_sansmedium';
+$sinkin-lt: 'sinkin_sans300_light';
+$sinkin-med: 'sinkin_sans500_medium';
+
+/* Helpers */
+.absolute {
+  position: absolute;
+}
+
+.center-inline {
+}
+
+.no-bullet li {
+  list-style: none;
+}
+
+.relative {
+  position: relative;
+}
+
+/* Common */
+body {
+  background: #005FA6;
+}
+
+h1, h2, strong {
+  font-weight: normal;
+}
+
+strong {
+  font-family: $alegreya-med;
+}
+
+h1 {
+  font-family: $sinkin-lt;
+  margin-top: 0;
+}
+
+h2 {
+  font-family: $sinkin-med;
+}
+
+.main-container {
+  font-family: $alegreya-lt;
+  font-size: 1.6em;
+  background: #fff;
+}
+
+.main-content-padding {
+  padding: 60px 0;
+}
+
+/* Header */
+
+.header-ht {
+  height: 146px;
+}
+
+.header-bkgrd {
+  background: url('../images/header_bkgrd.gif') no-repeat center center;
+  position: relative;
+  z-index: 2;
+}
+
+.header-right {
+  left: 50%;
+  top: 0;
+  width: 100%;
+}
+
+.header-left {
+  width: 100%;
+  right: 50%;
+}
+
+.logo img{
+  margin: 10px 0 0 30px;
+}
+
+.dfci-head {
+  margin: 30px 50px 0 0;
+}
+
+.ltblue {
+  background: $ltblue;
+}
+
+.dkblue {
+  background: $dkblue;
+}
+
+/* Nav */
+.nav-area {
+  border-top: $green 6px solid;
+  background: $green url('../images/nav_bkgrd.gif') 0 0 repeat-x;
+  font-family: $sinkin-med;
+}
+
+/* Hero */
+.hero-bkgrd {
+  background: #E6EFF6 url('../images/hero_bkgrd.gif') 100% 0 no-repeat;
+  border-bottom: $green 6px solid;
+  padding-bottom: 40px;
+}
+
+/* Home */
+
+
+.immune-home {
+  width: 80%; 
+  h1 {
+    color: $dkblue;
+    font-size: 1.6em;
+  }
+  ul {
+    margin: 10px 0;
+  }
+  li {
+    color: $green;
+    font-family: $sinkin-lt;
+    font-size: 1.1em;
+    line-height: 1.6em;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header-bkgrd {
+    background: url('../images/header_bkgrd_1200.gif') no-repeat center center;
+  }
+}
+
+@media (max-width: 992px) {
+  .header-bkgrd {
+    background: url('../images/header_bkgrd_992.gif') no-repeat center center;
+  }
+}
