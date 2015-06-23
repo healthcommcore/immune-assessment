@@ -5,10 +5,25 @@
 $dkblue: #0C3965;
 $ltblue: #005da8;
 $green: #87A52E;
+$dk-green: #344A21;
 $alegreya-lt: 'alegreya_sanslight';
 $alegreya-med: 'alegreya_sansmedium';
 $sinkin-lt: 'sinkin_sans300_light';
+$sinkin-reg: 'sinkin_sans400_regular';
 $sinkin-med: 'sinkin_sans500_medium';
+
+/* Mixins */
+@mixin menustyle {
+	float: left;
+	list-style: none;
+}
+
+@mixin border ($type) {
+  border-#{$type}-width: 6px;
+  border-#{$type}-style: solid;
+  border-#{$type}-color: $green;
+}
+
 
 /* Helpers */
 .absolute {
@@ -73,7 +88,6 @@ h2 {
 .header-right {
   left: 50%;
   top: 0;
-  width: 100%;
 }
 
 .header-left {
@@ -98,24 +112,51 @@ h2 {
 }
 
 /* Nav */
+.navbar-collapse .navbar-nav {
+  margin-left: 90px;
+}
+
+.nav > li > a {
+  color: #fff;
+  font-size: 1.3em;
+}
+
+.navbar-nav > li {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.navbar-nav > li > a {
+  padding-top: 11px;
+  padding-bottom: 17px;
+}
+
+
+.nav > li > a.active-trail, 
+.nav > li > a:hover, 
+.nav > li > a:focus {
+  background: none;
+  color: $dk-green;
+}
+
 .nav-area {
-  border-top: $green 6px solid;
   background: $green url('../images/nav_bkgrd.gif') 0 0 repeat-x;
-  font-family: $sinkin-med;
+  font-family: $sinkin-reg;
+  @include border(top);
 }
 
 /* Hero */
 .hero-bkgrd {
   background: #E6EFF6 url('../images/hero_bkgrd.gif') 100% 0 no-repeat;
-  border-bottom: $green 6px solid;
   padding-bottom: 40px;
+  @include border(bottom);
 }
 
 /* Home */
 
-
 .immune-home {
   width: 80%; 
+  margin-bottom: 40px;
   h1 {
     color: $dkblue;
     font-size: 1.6em;
@@ -129,6 +170,48 @@ h2 {
     font-size: 1.1em;
     line-height: 1.6em;
   }
+}
+
+/* Footer */
+.footer {
+  padding-bottom: 55px;
+  border-top: none;
+  margin-top: 0;
+  @include border(top);
+
+}
+
+.footer-legal {
+    font-size: 1.3em;
+    color: #fff;
+    p {
+      margin: 0;
+    }
+    a {
+      color: #fff;
+    }
+	ul {
+		padding-left: 0;
+		float: right;
+	}
+	li {
+		padding: 0 10px;
+		border-right: #fff 1px solid;
+        @include menustyle;
+	}
+	li:first-child {
+	 padding-left: 0;
+	}
+	li:last-child {
+		border: none;
+	}
+	.legal {
+		text-align: right;
+		font-size: 75%;
+        a {
+          text-decoration: underline;
+        }
+	}
 }
 
 @media (max-width: 1200px) {

@@ -191,20 +191,22 @@
   </div>
 	</div>
 </div><!-- main-container-->
-<footer class="footer container">
-	<?php if (!empty($page['footer_logos']) || !empty($page['footer_legal'])): ?>
-		<div class="row">
-			<?php if (!empty($page['footer_logos'])): ?>
-				<div class="col-md-8 footer-logos">
-					<?php print render($page['footer_logos']); ?>
-				</div>
-			<?php endif; ?>
-			<?php if (!empty($page['footer_legal'])): ?>
-				<div class="col-md-4 footer-legal">
-					<?php print render($page['footer_legal']); ?>
-				</div>
-			<?php endif; ?>
-		</div>
-	<?php endif; ?>
-	<?php print render($page['footer']); ?>
+<footer class="footer">
+  <div class="container">
+    <?php if (!empty($page['footer_logos']) || !empty($page['footer_legal'])): ?>
+      <div class="row">
+        <?php if (!empty($page['footer_logos'])): ?>
+          <div class="col-md-7 footer-logos">
+            <?php print render($page['footer_logos']); ?>
+          </div>
+        <?php endif; ?>
+        <?php if (!empty($page['footer_legal'])): ?>
+          <div class="col-md-5 footer-legal">
+            <?php print render($page['footer_legal']); ?>
+          </div>
+        <?php endif; ?>
+      </div>
+    <?php endif; ?>
+    <?php print render($page['footer']); ?>
+  </div>
 </footer>
