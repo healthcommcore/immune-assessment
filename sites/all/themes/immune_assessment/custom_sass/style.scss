@@ -1,18 +1,26 @@
 /* Styles */
 @import 'fonts.scss';
 
+
 /* Variables */
+
 $dkblue: #0C3965;
 $ltblue: #005da8;
+$babyblue: #BBD5E7;
 $green: #87A52E;
 $dk-green: #344A21;
+$cell-stripe-border: #CCDF96;
+$cell-stripe-bkgrd: #F8FDE6;
 $alegreya-lt: 'alegreya_sanslight';
+$alegreya-reg: 'alegreya_sansregular';
 $alegreya-med: 'alegreya_sansmedium';
 $sinkin-lt: 'sinkin_sans300_light';
 $sinkin-reg: 'sinkin_sans400_regular';
 $sinkin-med: 'sinkin_sans500_medium';
+$sinkin-semibold: 'sinkin_sans600_semibold';
 
 /* Mixins */
+
 @mixin menustyle {
 	float: left;
 	list-style: none;
@@ -26,6 +34,7 @@ $sinkin-med: 'sinkin_sans500_medium';
 
 
 /* Helpers */
+
 .absolute {
   position: absolute;
 }
@@ -41,7 +50,9 @@ $sinkin-med: 'sinkin_sans500_medium';
   position: relative;
 }
 
+
 /* Common */
+
 body {
   background: #005FA6;
 }
@@ -57,10 +68,17 @@ strong {
 h1 {
   font-family: $sinkin-lt;
   margin-top: 0;
+  color: $ltblue;
+}
+
+.page-header {
+  border-bottom-color: $ltblue;
 }
 
 h2 {
   font-family: $sinkin-med;
+  color: $green;
+  font-size: 1.0em;
 }
 
 .main-container {
@@ -69,9 +87,10 @@ h2 {
   background: #fff;
 }
 
-.main-content-padding {
+.content-padding {
   padding: 60px 0;
 }
+
 
 /* Header */
 
@@ -111,7 +130,9 @@ h2 {
   background: $dkblue;
 }
 
+
 /* Nav */
+
 .navbar-collapse .navbar-nav {
   margin-left: 90px;
 }
@@ -145,12 +166,36 @@ h2 {
   @include border(top);
 }
 
+
+/* Subnav */
+
+.submenu {
+  margin: 30px 20px 0 0;
+  font-family: $sinkin-semibold;
+  font-size: 0.6em;
+  text-align: right;
+  .nav {
+    li {
+      a {
+        color: $ltblue;
+      }
+      a:hover,
+      a:focus,
+      a.active-trail {
+        color: $dkblue;
+      }
+    }
+  }
+}
+
 /* Hero */
+
 .hero-bkgrd {
   background: #E6EFF6 url('../images/hero_bkgrd.gif') 100% 0 no-repeat;
   padding-bottom: 40px;
   @include border(bottom);
 }
+
 
 /* Home */
 
@@ -172,7 +217,62 @@ h2 {
   }
 }
 
+
+/* Services accordion pages */
+
+.ui-accordion {
+  margin: 25px 0;
+  .ui-accordion-header {
+    font-family: $sinkin-semibold;
+    font-size: 0.7em;
+    margin-top: 5px;
+  }
+  .ui-widget-content {
+    border-color: $babyblue;
+    padding: 15px 30px;
+  }
+  .ui-state-default {
+    background: $babyblue;
+    border: none;
+    a {
+      color: $ltblue;
+    }
+    a:hover, 
+    a:focus {
+      color: $dkblue;
+    }
+  }
+  .table-striped tbody tr:nth-child(2n+1) td {
+    background-color: $cell-stripe-bkgrd;
+  }
+  .table {
+    thead th {
+      font-size: 0.7em;
+      border-bottom: none;
+      color: $green;
+      font-family: $sinkin-lt;
+      padding-bottom: 20px;
+    }
+    tbody tr td {
+      font-size: 0.8em;
+      font-family: $alegreya-reg;
+      border-top-color: $cell-stripe-border;
+    }
+  }
+}
+
+.ui-widget p {
+  font-family: $alegreya-reg;
+  line-height: 1.45em;
+}
+
+
+
+.ui-icon {
+}
+
 /* Footer */
+
 .footer {
   padding-bottom: 55px;
   border-top: none;

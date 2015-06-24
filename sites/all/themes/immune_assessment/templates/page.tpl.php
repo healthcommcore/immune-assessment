@@ -150,7 +150,9 @@
 
     <?php if (!empty($page['sidebar_first'])): ?>
       <aside class="col-sm-3" role="complementary">
-        <?php print render($page['sidebar_first']); ?>
+        <div class="content-padding">
+          <?php print render($page['sidebar_first']); ?>
+        </div>
       </aside>  <!-- /#sidebar-first -->
     <?php endif; ?>
 
@@ -158,7 +160,7 @@
 				<?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
 				<a id="main-content"></a>
 				<?php print render($title_prefix); ?>
-					<div class="main-content-padding">
+					<div class="content-padding">
 						<?php if (!empty($title) && !drupal_is_front_page()): ?>
 							<h1 class="page-header"><?php print $title; ?></h1>
 						<?php endif; ?>
