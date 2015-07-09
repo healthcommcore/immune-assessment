@@ -39,9 +39,6 @@ $sinkin-semibold: 'sinkin_sans600_semibold';
   position: absolute;
 }
 
-.center-inline {
-}
-
 .no-bullet li {
   list-style: none;
 }
@@ -69,6 +66,7 @@ h1 {
   font-family: $sinkin-lt;
   margin-top: 0;
   color: $ltblue;
+  line-height: 1.3em;
 }
 
 .page-header {
@@ -79,6 +77,7 @@ h2 {
   font-family: $sinkin-med;
   color: $green;
   font-size: 1.0em;
+  line-height: 1.4em;
 }
 
 .main-container {
@@ -152,6 +151,13 @@ h2 {
   padding-bottom: 17px;
 }
 
+.navbar-toggle {
+  border: #fff 2px solid;
+}
+
+.navbar-toggle .icon-bar {
+  background: #fff;
+}
 
 .nav > li > a.active-trail, 
 .nav > li > a:hover, 
@@ -178,6 +184,7 @@ h2 {
     li {
       a {
         color: $ltblue;
+        padding: 10px 0;
       }
       a:hover,
       a:focus,
@@ -214,6 +221,24 @@ h2 {
     font-family: $sinkin-lt;
     font-size: 1.1em;
     line-height: 1.6em;
+  }
+}
+
+
+/* Staff */
+
+.staff {
+  img {
+    float: left;
+	margin: 0 15px 20px 0;
+  }
+  p {
+    margin-top: 20px;
+  }
+  p:after {
+    content: "";
+	display: block;
+	clear: both;
   }
 }
 
@@ -320,8 +345,176 @@ h2 {
   }
 }
 
-@media (max-width: 992px) {
+
+/* Tablet portrait */
+
+@media (max-width: 991px) {
   .header-bkgrd {
     background: url('../images/header_bkgrd_992.gif') no-repeat center center;
   }
+
+  .navbar-collapse .navbar-nav {
+    margin-left: 0;
+  }
+
+  .navbar-nav > li {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .dfci-head {
+    margin: 20px 0 0 0;
+    width: 80%;
+  }
+
+  .submenu {
+    font-size: 55%;
+  }
+
+  .immune-home {
+    h1 {
+      font-size: 1.3em;
+    }
+    ul {
+      padding-left: 30px;
+    }
+    li {
+      font-size: 1.0em;
+    }
+  }
+
+  .footer-legal {
+    font-size: 100%;
+  }
+
+}
+
+
+/* Phone */
+
+@media (max-width: 767px) {
+
+  h1 {
+    font-size: 130%;
+    line-height: 1.3em;
+  }
+
+  h1.page-header {
+  }
+
+  h2 {
+    font-size: 90%;
+    line-height: 1.3em;
+    margin-top: 10px;
+  }
+
+  .content-padding {
+    padding: 30px 0 60px 0;
+  }
+
+  header {
+    .col-sm-6 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .navbar-nav {
+    .dropdown {
+      a.active {
+        padding-bottom: 10px;
+      }
+    }
+    .dropdown-menu {
+      display: block;
+      position: relative;
+      box-shadow: none;
+      background: none;
+      margin-bottom: 20px;
+      border: none;
+      
+      li > a {
+        padding: 7px 25px 12px 25px;
+        color: #fff;
+      }
+
+      li > a:hover,
+      li > a.active,
+      li > a.active-trail,
+      li > a:focus {
+        background: none;
+        color: $dk-green;
+      }
+    }
+  } 
+
+  .logo img{
+    margin: 20px auto;
+    width: 270px;
+  }
+
+  .dfci-head {
+    margin: 0;
+  }
+
+  .dfci-head img {
+    width: 155px;
+    margin: 0 auto;
+  }
+
+  .dfci-head.pull-right {
+    float: none !important;
+  }
+
+  .immune-home {
+    width: 90%;
+
+    h1 {
+      font-size: 110%;
+      margin-bottom: 14px;
+    }
+
+    ul {
+      padding-left: 0;
+    }
+
+    li {
+      font-size: 80%;
+      line-height: 1.3em;
+      margin-bottom: 10px;
+    }
+  }
+
+
+  .ui-accordion .ui-accordion-header {
+    font-size: 60%;
+    padding: 10px 10px 11px 26px;
+    margin-top: 12px;
+  }
+
+  .footer-logos {
+    a {
+      //display: inline-block;
+    }
+
+    img {
+      margin: 20px auto;
+    }
+  }
+
+  .footer-legal {
+    text-align: center;
+    margin-top: 15px;
+      
+    ul {
+      float: none;
+      margin-right: auto;
+      margin-left: auto;
+      display: inline-block;
+    }
+    .legal {
+      text-align: center;
+    }
+  }
+
 }
