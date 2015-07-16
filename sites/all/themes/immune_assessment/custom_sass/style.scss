@@ -292,7 +292,7 @@ h2 {
 /* Footer */
 
 .footer {
-  padding-bottom: 55px;
+  padding: 45px 0 55px 0;
   border-top: none;
   margin-top: 0;
   @include border(top);
@@ -497,6 +497,10 @@ h2 {
     font-size: 60%;
     padding: 10px 10px 11px 26px;
     margin-top: 12px;
+  }
+
+  .footer {
+    padding-top: 20px;
   }
 
   .footer-logos {
