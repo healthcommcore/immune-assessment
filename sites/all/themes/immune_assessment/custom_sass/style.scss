@@ -10,6 +10,8 @@ $ltblue: #005da8;
 $babyblue: #BBD5E7;
 $green: #87A52E;
 $dk-green: #344A21;
+$link-color: #DB7227;
+$link-hover: #BA4A00;
 $cell-stripe-border: #CCDF96;
 $cell-stripe-bkgrd: #F8FDE6;
 $alegreya-lt: 'alegreya_sanslight';
@@ -91,6 +93,16 @@ h2 {
   padding: 60px 0;
 }
 
+a {
+  color: $link-color;
+  font-weight: 700;
+}
+
+a:hover,
+a:focus {
+  color: $link-hover;
+  text-decoration: none;
+}
 
 /* Header */
 
@@ -140,6 +152,7 @@ h2 {
 .nav > li > a {
   color: #fff;
   font-size: 1.3em;
+  font-weight: normal;
 }
 
 .navbar-nav > li {
@@ -176,13 +189,17 @@ h2 {
   .nav {
     li {
       a {
-        color: $ltblue;
+        font-weight: normal;
+        color: $link-color;
         padding: 10px 0;
       }
       a:hover,
       a:focus,
       a.active-trail {
-        color: $dkblue;
+        color: $link-hover;
+      }
+      a.active-trail {
+        font-weight: 700;
       }
     }
   }
