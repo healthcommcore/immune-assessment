@@ -12,6 +12,8 @@ $green: #87A52E;
 $dk-green: #344A21;
 $link-color: #DB7227;
 $link-hover: #BA4A00;
+$dropdown-bkgrd: #e9f3f7;
+$dropdown-border: #C0CACE;
 $cell-stripe-border: #CCDF96;
 $cell-stripe-bkgrd: #F8FDE6;
 $alegreya-lt: 'alegreya_sanslight';
@@ -257,24 +259,46 @@ a:focus {
 
 .ui-accordion {
   margin: 25px 0;
+  .ui-icon {
+    width: 12px;
+    height: 12px;
+    background-image: url('../images/accordion_arrows.png');
+  }
+  .ui-state-default .ui-icon {
+    background-image: url('../images/accordion_arrows.png');
+  }
+  .ui-icon-triangle-1-e {
+    background-position: 0 0;
+  }
+  .ui-state-focus .ui-icon {
+    background-position: 0 -12px;
+  }
   .ui-accordion-header {
     font-family: $sinkin-semibold;
     font-size: 0.7em;
     margin-top: 5px;
+    .ui-accordion-header-icon {
+      left: 0.9em;
+      margin-top: -6px;
+    }
   }
   .ui-widget-content {
-    border-color: $babyblue;
+    border-color: $dropdown-border;
     padding: 15px 30px;
   }
   .ui-state-default {
-    background: $babyblue;
+    background: $dropdown-bkgrd;
     border: none;
     a {
-      color: $ltblue;
+      color: $link-color;
+      font-weight: normal;
     }
     a:hover, 
     a:focus {
-      color: $dkblue;
+      color: $link-hover;
+    }
+    a:focus {
+      font-weight: 700;
     }
   }
   .table-striped tbody tr:nth-child(2n+1) td {
